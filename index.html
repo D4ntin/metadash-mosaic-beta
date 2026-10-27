@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./favicon.svg" />
+    <script>
+      // Pre-paint theme (ticket 13): mirrors $lib/theme.svelte.js so the first frame is already dark when
+      // it should be. Keep the two in step.
+      try {
+        var t = localStorage.getItem('fortunoff.theme');
+        if (t === 'dark' || (t !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    </script>
+    <link href="./_app/immutable/entry/start.Df-aACXf.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/Do39O4Zg.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/DXvEwp0G.js" rel="modulepreload">
+		<link href="./_app/immutable/entry/app.D6pl3QtY.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
+		<link href="./_app/immutable/nodes/0.Bw8avcbq.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/BFDjd30g.js" rel="modulepreload">
+		<link href="./_app/immutable/nodes/2.BEwrPmy_.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/BTg09deF.js" rel="modulepreload">
+		
+		<link href="./_app/immutable/assets/0.q2bxS4MY.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/DetailPane.Cx39_Gdi.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.CpYLGrYc.css" rel="stylesheet">
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">
+			<script>
+				{
+					__sveltekit_z8rlaq = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/metadash-mosaic-beta"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.Df-aACXf.js"),
+						import("./_app/immutable/entry/app.D6pl3QtY.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>
